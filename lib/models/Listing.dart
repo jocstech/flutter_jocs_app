@@ -13,6 +13,7 @@ class Listing {
       : _id = json['_id'],
         alias = json['alias'],
         excerpt = json['excerpt'];
+
   Map toJson() {
     return {'_id': _id, 'alias': alias, 'excerpt': excerpt};
   }

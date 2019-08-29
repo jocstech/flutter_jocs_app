@@ -8,12 +8,12 @@ class ListingView extends StatefulWidget {
 }
 
 class _ListingViewState extends State {
-  var listings = new List();
+  var listings = new List<Listing>();
 
   _getListings() {
-    DataServices.fetchListings().then((res) {
+    DataServices.fetchListings().then((data) {
       setState(() {
-        Iterable list = res;
+        Iterable list = data;
         listings = list.map((item) => Listing.fromJson(item)).toList();
       });
     });
@@ -32,8 +32,6 @@ class _ListingViewState extends State {
 
   @override
   Widget build(BuildContext context) {
-    // final listings = DataServices().fetchPost();
-
     return Scaffold(
         backgroundColor: Colors.black,
         body: Center(
