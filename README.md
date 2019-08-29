@@ -1,4 +1,4 @@
-# jocs_app
+# Jocs Mobile APP Dev by Flutter
 
 A new Flutter project.
 
